@@ -164,9 +164,90 @@
             .countdown-timer { font-size: 4rem; }
             .prayer-time { font-size: 2rem; }
         }
+
+        /* تصميم قسم الإعلانات */
+    .ads-section {
+        width: 90%;
+        max-width: 1400px;
+        margin: 20px auto;
+        position: relative;
+        z-index: 10;
+    }
+
+    .ads-container {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1); /* تأثير زجاجي */
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        padding: 15px 25px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        overflow: hidden;
+    }
+
+    .ads-label {
+        background: var(--gold, #d4af37);
+        color: #000;
+        font-weight: 800;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        margin-left: 20px;
+        white-space: nowrap;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        animation: pulse-gold 2s infinite;
+    }
+
+    .ads-content {
+        flex-grow: 1;
+        overflow: hidden;
+    }
+
+    .ads-text {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0;
+        font-weight: 500;
+        /* حركة النص المتحرك (اختياري) */
+        animation: marquee 15s linear infinite;
+        white-space: nowrap;
+    }
+
+    /* تأثير نبض للعنوان */
+    @keyframes pulse-gold {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    /* حركة النص من اليمين لليسار */
+    @keyframes marquee {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+
+    /* تعديل للشاشات الكبيرة TV */
+    @media (min-width: 1900px) {
+        .ads-text { font-size: 2.8rem; }
+        .ads-label { font-size: 2rem; }
+    }
     </style>
 </head>
 <body>
+
+    <!-- ads -->
+    <!--  <div class="ads-section">
+    <div class="ads-container">
+        <div class="ads-label">تنويه هـام</div>
+        <div class="ads-content">
+            <p class="ads-text">
+                ترقبوا مسابقة "ختم القرآن" الكبرى في المسجد بعد صلاة التراويح.. جوائز قيمة للفائزين! 
+            </p>
+        </div>
+    </div>
+</div> -->
+<!-- نهاية ads -->
 
     <div class="stars"></div>
 
